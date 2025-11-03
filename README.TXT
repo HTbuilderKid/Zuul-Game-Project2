@@ -1,20 +1,3 @@
-Project: zuul-with-enums-v1
-Authors: Michael Kölling and David J. Barnes
 
-This project is part of the material for the book
-
-   Objects First with Java - A Practical Introduction using BlueJ
-   Seventh edition
-   David J. Barnes and Michael Kölling
-   
-This project is a simple framework for an adventure game. In this version,
-it has a few rooms and the ability for a player to walk between these rooms.
-That's all.
-
-To start this application, create an instance of class "Game" and call its
-"play" method.
-
-This project was written to illustrate the use of enums to support
-language independence of the game logic.
-
-Read chapter 8 of the book to get a detailed description of the project.
+40. No, we don't need to make any changes to the game class. This is exactly why the enums version of the game is better than the original, and also why we're trying to improve the Zuul-bad. In the original version, commands like "go" and "quit" were hard-coded all over the Game class at the start (first commit of the project), which means that if we wanted to change "go" to "aller", like I did in the zuul-enums version, we'd have to search for every if(commandWord.equals("go")) and update it manually. 
+In the enums version, the words that players type are isolated inside CommandWords, which means that the rest of the game just works with the internal enum values, like "CommandWord.GO/QUIT/etc, which never change. (The concept that we leaned in class, "loosely coupled", applies here. We can make changes to one class without affecting how another class works.)
