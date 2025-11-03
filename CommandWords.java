@@ -27,6 +27,7 @@ public class CommandWords
         validCommands.put("help", CommandWord.HELP);
         validCommands.put("?", CommandWord.HELP);
         validCommands.put("quit", CommandWord.QUIT);
+        validCommands.put("look", CommandWord.LOOK);
     }
 
     /**

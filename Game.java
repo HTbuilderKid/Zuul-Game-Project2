@@ -98,16 +98,21 @@ public class Game
     private boolean processCommand(Command command) 
     {
         boolean wantToQuit = false;
-
         CommandWord commandWord = command.getCommandWord();
 
         switch (commandWord) {
             case UNKNOWN -> System.out.println("I don't know what you mean...");
             case HELP    -> printHelp();
             case GO      -> goRoom(command);
+            case LOOK    -> look();
             case QUIT    -> wantToQuit = quit(command);
         }
         return wantToQuit;
+    }
+    
+    private void look()
+    {
+        System.out.println(currentRoom.getLongDescription());
     }
 
     // implementations of user commands:
