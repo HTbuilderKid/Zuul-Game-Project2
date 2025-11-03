@@ -23,11 +23,11 @@ public class CommandWords
     public CommandWords()
     {
         validCommands = new HashMap<>();
-        validCommands.put("aller", CommandWord.GO);
-        validCommands.put("aide", CommandWord.HELP);
+        validCommands.put("go", CommandWord.GO);
+        validCommands.put("assist", CommandWord.HELP);
         validCommands.put("?", CommandWord.HELP);
-        validCommands.put("sortir", CommandWord.QUIT);
-        validCommands.put("regarder", CommandWord.LOOK);
+        validCommands.put("quit", CommandWord.QUIT);
+        validCommands.put("look", CommandWord.LOOK);
     }
 
     /**
